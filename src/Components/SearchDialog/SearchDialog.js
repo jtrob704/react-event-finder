@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './SearchDialog.css'
+import PropTypes from 'prop-types';
 
 export class SearchDialog extends Component {
     constructor(props){
@@ -47,6 +48,11 @@ export class SearchDialog extends Component {
             </div>
         )
     }
+}
+
+SearchDialog.propTypes = {
+    location: PropTypes.string,
+    event: PropTypes.string
 }
 
 export default SearchDialog
