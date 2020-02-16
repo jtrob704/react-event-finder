@@ -1,0 +1,30 @@
+.navbar {    
+    display: flex;
+    position: top;  
+    height: 2.5rem;  
+    color: white;
+    background: black;
+    align-items: center; 
+    justify-content: space-between;   
+    list-style: none;
+}
+
+.nav-title {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;    
+    list-style: none;
+}
+
+.nav-item {
+    margin-right: 2rem;
+    padding: 0.5rem;
+}
+
+li:hover {    
+    border-bottom: 1px solid orangered;
+    cursor: pointer;
+}

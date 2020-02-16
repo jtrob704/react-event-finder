@@ -1,0 +1,28 @@
+.search-dialog {    
+    display: block;        
+    width: 50%;
+    height: 10rem;
+    background-color: #fff;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+    margin-top: 15rem;
+}
+
+.search-title {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-options {
+    text-align: center;    
+}
+
+.search-options input{
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+h1 {        
+    text-align: center;
+} 
