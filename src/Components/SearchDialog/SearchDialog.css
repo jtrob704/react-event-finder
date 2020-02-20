@@ -1,9 +1,8 @@
 .search-dialog {    
     display: block;        
     width: 60%;
-    height: 10rem;
-    background-color: #fff;
-    justify-content: center; 
+    height: 12rem;
+    background-color: #fff;    
     align-items: center; 
     margin: auto;
     margin-top: 15rem;
@@ -16,15 +15,17 @@
 
 .search-options {
     text-align: center;    
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-.search-options input {
-    margin-right: 2rem;
-    margin-left: 1rem;
-    font-size: 1.5rem;
+.Button {
+    height: 3.5rem;
 }
 
 h1 {        
     text-align: center;
 } 
+
+.MuiFormControl-root {
+    margin-right: 2rem;
+}

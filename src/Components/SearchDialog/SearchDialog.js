@@ -1,8 +1,11 @@
-import React, { Component } from 'react'
-import './SearchDialog.css'
+import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import './SearchDialog.css';
 import PropTypes from 'prop-types';
 
-export class SearchDialog extends Component {
+class SearchDialog extends Component {   
+
     constructor(props){
         super(props);
 
@@ -11,8 +14,8 @@ export class SearchDialog extends Component {
             event: ''
         };
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+        this.handleSubmit = this.handleSubmit.bind(this);        
+    }    
 
     handleChange(e) {
         const nam = e.target.name;
@@ -23,26 +26,38 @@ export class SearchDialog extends Component {
     handleSubmit(e) {
         alert(`Location: ${this.state.location} \nEvent: ${this.state.event}`);
         e.preventDefault();
-    }
-
+    }    
 
     render() {
+       
         return (                                               
             <div className="search-dialog">   
                 <div className="search-title">             
                     <h1>Find an event near you</h1>
                 </div>
                 <div className="search-options">
-                    <form onSubmit={this.handleSubmit}>                                       
-                        <label>
-                            Location:
-                            <input type="text" value={this.state.location} name="location" placeholder="Enter City" onChange={this.handleChange}></input>
-                        </label>
-                        <label>
-                            Event:
-                            <input type="text" value={this.state.event} name="event" placeholder="Event Name" onChange={this.handleChange}></input>
-                        </label>
-                        <input type="submit" value="Search Events"></input>
+                    <form onSubmit={this.handleSubmit}>                                                                                     
+                        <TextField
+                            
+                            id="location-search" 
+                            type="text" 
+                            value={this.state.location} 
+                            label="City, St OR Zip Code"
+                            name="location" 
+                            onChange={this.handleChange} 
+                            variant="outlined" />     
+
+                        <TextField 
+                            
+                            id="event-search"
+                            type="text" 
+                            value={this.state.event}
+                            label="Event Search"
+                            name="event" 
+                            onChange={this.handleChange} 
+                            variant="outlined" />
+
+                        <Button className="Button" variant="contained" size="large" color="primary" onClick={this.handleSubmit}>Search Events</Button>
                     </form>      
                 </div>          
             </div>
@@ -55,4 +70,4 @@ SearchDialog.propTypes = {
     event: PropTypes.string
 }
 
-export default SearchDialog
+export default SearchDialog;
